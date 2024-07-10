@@ -1,4 +1,4 @@
-package com.nsteuerberg;
+package com.nsteuerberg.model;
 
 public class Users {
     private long id;

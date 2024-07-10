@@ -1,7 +1,10 @@
-package com.nsteuerberg;
+package com.nsteuerberg.controller;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.nsteuerberg.model.Users;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.net.URI;
@@ -10,8 +13,10 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.List;
 
+
 public class ApiUse {
     public static final String BASE_URL = "http://localhost:8080/usuarios/";
+    private String dato;
     public void getUsers(){
         try {
             HttpClient client = HttpClient.newHttpClient();
@@ -30,5 +35,17 @@ public class ApiUse {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void postUsers(){
+
+    }
+
+    public String getDato() {
+        return dato;
+    }
+
+    public void setDato(String dato) {
+        this.dato = dato;
     }
 }
