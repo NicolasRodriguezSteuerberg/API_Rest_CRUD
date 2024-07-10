@@ -15,6 +15,13 @@ public class Users {
         this.email = email;
     }
 
+    public Users(long id, String nombre, String direccion, String email) {
+        this.id = id;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.email = email;
+    }
+
     @Override
     public String toString() {
         return "id = " + id +
